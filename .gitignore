@@ -5,3 +5,4 @@
 /statistic.json
 /config_user.json
 *.pyc
+/.idea

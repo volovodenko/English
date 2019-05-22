@@ -24,13 +24,14 @@ def run_import_lingueleo():
 
 
 def run_main():
-    import src.singleton
-    si = src.singleton.SingleInstance()
-    si
+    # import src.singleton
+    # si = src.singleton.SingleInstance()
+    # si
 
     import src.app
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     src.app.App()
+
 
 if __name__ == "__main__":
     if "-new" not in sys.argv:

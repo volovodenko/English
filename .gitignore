@@ -6,3 +6,4 @@
 /config_user.json
 *.pyc
 /.idea
+/venv

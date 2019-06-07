@@ -6,7 +6,7 @@ import json
 import os.path
 import unittest
 
-reg_cmnt = re.compile(r"/\*.*?\*/", re.DOTALL)
+reg_cmnt = re.compile(r"/\*.*\*/", re.DOTALL)
 
 
 class Config:

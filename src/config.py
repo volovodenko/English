@@ -6,7 +6,7 @@ import json
 import os.path
 import unittest
 
-reg_cmnt = re.compile(r"/\*.*\*/", re.DOTALL)
+reg_cmnt = re.compile(r"/\*.*?\*/", re.DOTALL)
 
 
 class Config:
@@ -14,11 +14,11 @@ class Config:
 
     def __init__(self, main_path=None, user_path=None):
         if main_path is None:
-            self._main_path = "config.json"
+            self._main_path = "config.json5"
         else:
             self._main_path = main_path
         if user_path is None:
-            self._user_path = "config_user.json"
+            self._user_path = "config_user.json5"
         else:
             self._user_path = user_path
         self._cfg_dict = {}
@@ -107,7 +107,7 @@ class ConfigTestCase(unittest.TestCase):
             "internet_dictionary_url": {"EN_RU": "http://slovari.yandex.ru/{word}/en-ru/#lingvo/",
                                         "RU_EN": "http://slovari.yandex.ru/{word}/en/#lingvo/"}}
 
-        cfg = Config("config.json", "fake_config_user.json")
+        cfg = Config("config.json5", "fake_config_user.json")
         cfg.reload()
         self.equal_cfg(cfg, test_dict)
 
@@ -132,7 +132,7 @@ class ConfigTestCase(unittest.TestCase):
                                         "RU_EN": "http1://slovari.yandex.ru/{word}/en/#lingvo/"}}
 
         json.dump(test_dict, open("test_config_user.json", "w"))
-        cfg = Config("config.json", "test_config_user.json")
+        cfg = Config("config.json5", "test_config_user.json")
         cfg.reload()
         self.equal_cfg(cfg, test_dict)
 
@@ -158,7 +158,7 @@ class ConfigTestCase(unittest.TestCase):
             "wrong_answer_percent": 40.0,
             "empty_answer_is_error": "no"})
 
-        cfg = Config("config.json", "test_config_user.json")
+        cfg = Config("config.json5", "test_config_user.json")
         cfg.reload()
         self.equal_cfg(cfg, test_dict)
 
@@ -182,7 +182,7 @@ class ConfigTestCase(unittest.TestCase):
             "internet_dictionary_url": {"EN_RU": "http://slovari.yandex.ru/{word}/en-ru/#lingvo/",
                                         "RU_EN": "http://slovari.yandex.ru/{word}/en/#lingvo/"}}
 
-        cfg = Config("config.json", "fake_config_user.json")
+        cfg = Config("config.json5", "fake_config_user.json")
         cfg.reload()
         self.equal_cfg(cfg, test_dict)
 

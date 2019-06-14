@@ -11,7 +11,7 @@ import codecs
 import re
 
 
-reg_cmnt = re.compile(r"/\*.*\*/", re.DOTALL)
+reg_cmnt = re.compile(r"/\*.*?\*/", re.DOTALL)
 
 class ErrDict(Exception):
     def __init__(self, value, loc_res_msg):

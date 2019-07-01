@@ -8,7 +8,10 @@ import word
 import global_stat
 import unittest
 import codecs
+import re
 
+
+reg_cmnt = re.compile(r"/\*.*?\*/", re.DOTALL)
 
 class ErrDict(Exception):
     def __init__(self, value, loc_res_msg):
@@ -112,7 +115,10 @@ class Dict:
             self.get_word_by_key(en).add_value(en, tr, ru)
 
     def load_dict_as_json(self, path):
-        return json.load(codecs.open(path, "r", "utf-8"))
+        txt = open(path).read()
+        txt = reg_cmnt.sub("", txt)  # remove comments
+
+        return json.loads(txt)
 
     def reload_dict(self, path):
         self.reload_dict_from_json(self.load_dict_as_json(path))

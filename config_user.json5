@@ -3,5 +3,6 @@
   "path_to_dict": "myDict.json5",
   "words_per_lesson": 20,
   "CntStudyWords": 1000,
-  "stat_count_row": 25
+  "stat_count_row": 25,
+  "retry_time": 2700
 }

@@ -13,14 +13,18 @@ class App(MainWindow):
     def __init__(self):
         self.lesson = None
         self.practice = None
+
         self.cfg = config.Config()
         self.cfg.create_default_user_config()
+
         self.factory = OperationFactory()
         MainWindow.__init__(self, self.factory)
         self.new_lesson()
-        self.mainloop()
+        self.mainloop()# З
 
+# запускається новий урок
     def new_lesson(self):
+        # перезагружаэться конфіг з файлів (якщо було щось змінено)
         self.cfg.reload()
         try:
             self.lesson = lesson.Lesson(self.cfg)

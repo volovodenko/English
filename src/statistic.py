@@ -11,6 +11,7 @@ class Statistic:
         -расчитывать рейтинг слова
         -сериализовать/десериализовать свои данные
     """
+
     def __init__(self):
         self.success_answer = 0  # Кол-во правильных ответов
         self.error_answer = 0  # Кол-во ошибочных ответов
@@ -84,168 +85,32 @@ class Statistic:
         else:
             self.error_answer += 1
 
+    # розпаковка даних статистики для даного слова,  даного напрямку перекладу
     def unpack(self, statistic):
+        # лямбда для деструктуризації словаря
+        pluck = lambda dict, *args: (dict[arg] for arg in args)
+
         (self.success_answer,
          self.error_answer,
          self.last_lesson_date,
          self.last_lesson_result,
          self.study_percent) = statistic
+        # в statistic список(массив) статистики для слова
+        # pluck(statistic, 'success_answer', 'error_answer', 'last_lesson_date', 'last_lesson_result', 'study_percent')
 
+# упаковка даних статистики в список(масив) для даного слова,  даного напрямку перекладу
     def pack(self):
-        return [self.success_answer,
-                self.error_answer,
-                self.last_lesson_date,
-                self.last_lesson_result,
-                self.study_percent]
-
-
-class StatisticTestCase(unittest.TestCase):
-    "Набор тестов для класса Statistic"
-
-    def setUp(self):
-        self.stat = Statistic()
-
-    def test_init(self):
-        "Тест конструктора"
-
-        self.assertEqual(self.stat.success_answer, 0)
-        self.assertEqual(self.stat.error_answer, 0)
-        self.assertEqual(self.stat.last_lesson_date, None)
-        self.assertEqual(self.stat.last_lesson_result, None)
-        self.assertEqual(self.stat.study_percent, 0)
-
-    def test_eq(self):
-        "Тест оператора сравнения"
-
-        other = Statistic()
-        self.assertEqual(self.stat, other)
-
-    def test_get_total_answer(self):
-        "Тест на расчет общего кол-ва ответов"
-
-        self.assertEqual(self.stat.get_total_answer(), 0)
-        self.stat.update(True, 0)
-        self.assertEqual(self.stat.get_total_answer(), 1)
-        self.stat.update(True, 0)
-        self.assertEqual(self.stat.get_total_answer(), 2)
-        self.stat.update(False, 0)
-        self.assertEqual(self.stat.get_total_answer(), 3)
-
-    def test_get_success_percent(self):
-        "Тест на расчет процента положительных ответов"
-
-        self.assertEqual(self.stat.get_success_percent(), 0.0)
-        self.stat.update(True, 0)
-        self.assertEqual(self.stat.get_success_percent(), 100.0)
-        self.stat.update(False, 0)
-        self.stat.update(True, 0)
-        self.stat.update(True, 0)
-        self.assertEqual(self.stat.get_success_percent(), 75.0)
-        self.stat.update(False, 0)
-        self.assertEqual(self.stat.get_success_percent(), 60.0)
-
-    def test_get_study_percent(self):
-        "Тест на расчет процента изучения слова"
-
-        self.assertEqual(self.stat.get_study_percent(), 0.0)
-        self.stat.update(True, 0)
-        self.assertEqual(self.stat.get_study_percent(), 0.0)
-        self.stat.update(True, 10)
-        self.assertEqual(self.stat.get_study_percent(), 10.0)
-        self.stat.update(True, 100)
-        self.assertEqual(self.stat.get_study_percent(), 100.0)
-        self.stat.update(True, -10)
-        self.assertEqual(self.stat.get_study_percent(), 90.0)
-        self.stat.update(True, -100)
-        self.assertEqual(self.stat.get_study_percent(), 0.0)
-
-    def test_is_new(self):
-        "Тест функции is_new"
-
-        self.assertEqual(self.stat.is_new(), True)
-        self.stat.update(True, 0)
-        self.assertEqual(self.stat.is_new(), False)
-
-    def test_calc_rating(self):
-        "Тест функции расчета рейтинга"
-
-        yesterday = (datetime.date.today() - datetime.timedelta(1)).strftime("%Y.%m.%d")
-
-        self.assertAlmostEqual(self.stat.calc_rating(), 153.015, 2)
-
-        self.stat.update(True, 10)
-        self.assertAlmostEqual(self.stat.calc_rating(), 0.848, 2)
-
-        self.stat.update(False, -30)
-        self.assertAlmostEqual(self.stat.calc_rating(), 67.170, 2)
-
-        self.stat.update(True, 10)
-        self.assertAlmostEqual(self.stat.calc_rating(), 25.325, 2)
-
-        self.stat.update(True, 10)
-        self.stat.last_lesson_date = yesterday
-        self.assertAlmostEqual(self.stat.calc_rating(), 20.708, 2)
-
-        for it in range(0, 7):
-            self.stat.update(True, 10)
-            self.stat.last_lesson_date = yesterday
-        self.assertAlmostEqual(self.stat.calc_rating(), 0.668, 2)
-
-        for it in range(0, 25):
-            self.stat.update(True, 10)
-            self.stat.last_lesson_date = yesterday
-        self.assertAlmostEqual(self.stat.calc_rating(), 0.100, 2)
-
-        self.stat.update(False, -30)
-        self.assertAlmostEqual(self.stat.calc_rating(), 0.223, 2)
-
-    def test_calc_rating_not_zero(self):
-        "Тест на то, что функция расчета рейтинга не возвращает ноль"
-
-        for it in range(0, 10):
-            self.stat.update(True, 10)
-        self.assertAlmostEqual(self.stat.calc_rating(), 0.1, 2)
-
-        for it in range(0, 100):
-            self.stat.update(True, 10)
-        self.assertAlmostEqual(self.stat.calc_rating(), 0.1, 2)
-
-    def test_update(self):
-        "Тест функции обновления статистики"
-
-        dt = datetime.date.today().strftime("%Y.%m.%d")
-        self.stat.update(True, 10)
-        self.assertEqual(self.stat.success_answer, 1)
-        self.assertEqual(self.stat.error_answer, 0)
-        self.assertEqual(self.stat.last_lesson_date, dt)
-        self.assertEqual(self.stat.last_lesson_result, True)
-        self.assertEqual(self.stat.study_percent, 10)
-
-        self.stat.update(False, -50)
-        self.assertEqual(self.stat.success_answer, 1)
-        self.assertEqual(self.stat.error_answer, 1)
-        self.assertEqual(self.stat.last_lesson_date, dt)
-        self.assertEqual(self.stat.last_lesson_result, False)
-        self.assertEqual(self.stat.study_percent, 0)
-
-        self.stat.update(False, -50)
-        self.assertEqual(self.stat.success_answer, 1)
-        self.assertEqual(self.stat.error_answer, 2)
-        self.assertEqual(self.stat.last_lesson_date, dt)
-        self.assertEqual(self.stat.last_lesson_result, False)
-        self.assertEqual(self.stat.study_percent, 0)
-
-    def test_pack_unpack(self):
-        "Тест функции упаковки и распаковки класса"
-
-        self.assertEqual(self.stat.pack(), [0, 0, None, None, 0])
-        statistic = (1, 2, "01.02.2010", False, 10)
-        self.stat.unpack(statistic)
-        self.assertEqual(self.stat.pack(), list(statistic))
-
-if __name__ == "__main__":
-    import os
-    import os.path
-    os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    suite = unittest.TestLoader().loadTestsFromTestCase(StatisticTestCase)
-    unittest.TextTestRunner(verbosity=2).run(suite)
+        return [
+            self.success_answer,
+            self.error_answer,
+            self.last_lesson_date,
+            self.last_lesson_result,
+            self.study_percent
+        ]
+        # {
+        #     'success_answer': self.success_answer,
+        #     'error_answer': self.error_answer,
+        #     'last_lesson_date': self.last_lesson_date,
+        #     'last_lesson_result': self.last_lesson_result,
+        #     'study_percent': self.study_percent
+        # }

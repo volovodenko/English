@@ -10,8 +10,8 @@ import unittest
 import codecs
 import re
 
-
 reg_cmnt = re.compile(r"/\*.*?\*/", re.DOTALL)
+
 
 class ErrDict(Exception):
     def __init__(self, value, loc_res_msg):
@@ -96,6 +96,7 @@ class DictJSONEncoder(json.JSONEncoder):
 class Dict:
     def __init__(self, cfg):
         self.words = {}
+        self.type_pr = None
         self.cfg = cfg
 
     def get_word_by_key(self, en):
@@ -132,8 +133,10 @@ class Dict:
         words = [self.words.get(key, None) for key in keys]
         return [list(w.get_source_info()) for w in words if w]
 
+    # обробка даних файла статистики
     def _reload_stat_from_json(self, json_stat):
         version = json_stat["version"]
+        self.type_pr = json_stat["type"]
         data = json_stat["data"]
 
         if version == 1:
@@ -144,16 +147,28 @@ class Dict:
         for it in data:
             self.get_word_by_key(it).unpack(data[it])
 
+    # загрузка даних з файла статистики
     def reload_stat(self, path):
         if os.path.exists(path):
             self._reload_stat_from_json(json.load(open(path)))
 
+    # збереження статистики в файл
     def save_stat(self, path):
         data = {}
         for it in self.words:
             data[it] = self.words[it].pack()
-        stat_json = {"version": 2, "data": data}
-        json.dump(stat_json, open(path, "wb"), indent=2)
+
+        # кожно разу міняю тип вивчення (en-ru, ru-en) на протилежний
+        # раніше було рандомно - так погано працює - багато разів може вибрати одне й те саме
+        if self.type_pr == word.en_to_ru_write:
+            type_pr = word.ru_to_en_write
+        else:
+            type_pr = word.en_to_ru_write
+
+        stat_json = {"version": 2, "data": data, "type": type_pr}
+        # print stat_json
+        # indent=2 - 2 символа відступів в файлі
+        json.dump(stat_json, open(path, "wb"), indent=2, sort_keys=True)
 
     def global_statistic(self):
         stat = global_stat.GlobalStatistic()
@@ -252,283 +267,3 @@ class Dict:
             rating = it.get_stat(type_pr).calc_rating()
             it.set_rating(rating)
         return lesson_words
-
-
-class DictTestCase(unittest.TestCase):
-    "Набор тестов для класса Dict"
-
-    def setUp(self):
-        self.dict_obj = Dict(None)
-
-    def create_word_data(self, num):
-        return ["en" + str(num), "tr" + str(num), "ru" + str(num)]
-
-    def create_word_stat(self, num):
-        key = "en" + str(num)
-        date = "2012.01"
-        stat1 = [num * 1, num * 10, date + str(num), num % 2 == 0, float(num)]
-        stat2 = [num * 20, num * 30, date + str(num + 1), num % 2 == 1, float(num * 2)]
-        return [key, {"0": stat1, "1": stat2}]
-
-    def json_dict(self, interval_from, interval_to):
-        return [self.create_word_data(i) for i in range(interval_from, interval_to)]
-
-    def load_dict(self, interval_from, interval_to):
-        json_obj = self.json_dict(interval_from, interval_to)
-        self.dict_obj.reload_dict_from_json(json_obj)
-
-    def load_stat(self, interval_from, interval_to, version):
-        json_data = dict([self.create_word_stat(i) for i in range(interval_from, interval_to)])
-        json_stat = {"version": version, "data": json_data}
-        self.dict_obj._reload_stat_from_json(json_stat)
-
-    def assertLoad(self, num):
-        dt = self.create_word_data(num)
-        wrd_info = self.dict_obj.get_word_by_key("en" + str(num)).get_show_info()
-        self.assertEqual((dt[0], "[%s]" % dt[1], dt[2]), wrd_info)
-
-    def assertNotLoad(self, num):
-        wrd_info = self.dict_obj.get_word_by_key("en" + str(num)).get_show_info()
-        self.assertEqual(("", "", ""), wrd_info)
-
-    def assertLoadStat(self, num):
-        wrd1 = word.Word()
-        wrd1.unpack(self.create_word_stat(num)[1])
-        wrd2 = self.dict_obj.get_word_by_key("en" + str(num))
-        self.assertEqual(wrd1.get_stat(0), wrd2.get_stat(0))
-        self.assertEqual(wrd1.get_stat(1), wrd2.get_stat(1))
-
-    def test_reload_dict(self):
-        "Тест на загрузку словаря"
-        interval_from = 0
-        interval_to = 5
-        self.load_dict(interval_from, interval_to)
-
-        for i in range(interval_from, interval_to):
-            self.assertLoad(i)
-
-    def test_reload_dict_empty_tr(self):
-        "Тест на загрузку словаря, в котором отсутствует или пустая транскрипция"
-        json_obj = [["en0", "ru0"], ["en1", "", "ru1"], ["en2", "tr2", "ru2"]]
-        self.dict_obj.reload_dict_from_json(json_obj)
-
-        self.assertEqual(("en0", "", "ru0"), self.dict_obj.get_word_by_key("en0").get_show_info())
-        self.assertEqual(("en1", "", "ru1"), self.dict_obj.get_word_by_key("en1").get_show_info())
-        self.assertEqual(("en2", "[tr2]", "ru2"), self.dict_obj.get_word_by_key("en2").get_show_info())
-
-    def test_reload_dict_err_key(self):
-        "Тест на обращение к несуществующим словам"
-        interval_from = 0
-        interval_to = 5
-        self.load_dict(interval_from, interval_to)
-
-        for i in range(interval_to, interval_to * 2):
-            self.assertNotLoad(i)
-
-    def test_reload_dict_double_reload(self):
-        "Тест на загрузку словаря дважды"
-        interval_from1 = 0
-        interval_to1 = 5
-        self.load_dict(interval_from1, interval_to1)
-        interval_from2 = 3
-        interval_to2 = 8
-        self.load_dict(interval_from2, interval_to2)
-
-        for i in range(interval_from1, interval_from2):
-            self.assertNotLoad(i)
-
-        for i in range(interval_from2, interval_to2):
-            self.assertLoad(i)
-
-    def test_reload_stat(self):
-        "Тест на загрузку статистики"
-        interval_from = 0
-        interval_to = 5
-        self.load_dict(interval_from, interval_to)
-        self.load_stat(interval_from, interval_to, 2)
-
-        for i in range(interval_from, interval_to):
-            self.assertLoad(i)
-            self.assertLoadStat(i)
-
-    def test_reload_stat_without_word(self):
-        "Тест на загрузку статистики без словаря"
-        interval_from = 0
-        interval_to = 5
-        self.load_stat(interval_from, interval_to, 2)
-
-        for i in range(interval_from, interval_to):
-            self.assertLoadStat(i)
-
-    def test_reload_stat_double(self):
-        "Тест на загрузку статистики дважды подряд"
-        interval_from1 = 0
-        interval_to1 = 5
-        self.load_stat(interval_from1, interval_to1, 2)
-        interval_from2 = 3
-        interval_to2 = 8
-        self.load_stat(interval_from2, interval_to2, 2)
-
-        for i in range(interval_from1, interval_to2):
-            self.assertLoadStat(i)
-
-    def test_loaded_words(self):
-        "Тест функции _loaded_words"
-        interval_from1 = 0
-        interval_to1 = 5
-        self.load_dict(interval_from1, interval_to1)
-        interval_from2 = 3
-        interval_to2 = 9
-        self.load_stat(interval_from2, interval_to2, 2)
-
-        loaded_words = self.dict_obj._loaded_words(0)
-        self.assertEqual(len(loaded_words), len(range(interval_from1, interval_to1)))
-
-        for i, it in enumerate(loaded_words):
-            self.assertEqual(it[0].get_show_info()[0], "en" + str(i))
-
-    def test_words_for_lesson(self):
-        "Тест выборки слов для изучения в текущем уроке"
-        interval_from1 = 0
-        interval_to1 = 5
-        self.load_dict(interval_from1, interval_to1)
-
-        w0 = self.dict_obj.get_word_by_key("en0")
-        w1 = self.dict_obj.get_word_by_key("en1")
-        w2 = self.dict_obj.get_word_by_key("en2")
-        w3 = self.dict_obj.get_word_by_key("en3")
-
-        w0.update_stat(False, 10, word.ru_to_en_write)
-        w1.update_stat(True, 10, word.en_to_ru_write)
-        w2.update_stat(True, 100, word.en_to_ru_write)
-
-        words_list = self.dict_obj.words_for_lesson(3, word.en_to_ru_write)
-        self.assertEqual(words_list, [w2, w0, w3, w1])
-        self.assertEqual(len(words_list), 4)
-
-    def test_load_error_stat_ver(self):
-        "Тест на то, что генерируется исключение на неправильную версию файла со статистикой"
-        try:
-            self.load_stat(0, 1, 999)
-            self.fail("except not found")
-        except ErrDict:
-            pass
-
-    def test_convert_stat_v1_to_v2(self):
-        "Тест на конвертацию формата статистики из v1 в v2"
-        data = {
-            "hello0": {"0": [0, 0, "any", "any"], "1": [0, 0, "any", "any"]},
-            "hello1": {"0": [1, 0, "any", "any"], "1": [1, 1, "any", "any"]},
-            "hello2": {"0": [9, 0, "any", "any"], "1": [9, 9, "any", "any"]},
-            "hello3": {"0": [10, 0, "any", "any"], "1": [10, 10, "any", "any"]},
-            "hello4": {"0": [20, 0, "any", "any"], "1": [20, 10, "any", "any"]}
-        }
-        data = statistic_v1_to_v2(data, 85.0, 10.0)
-        self.assertEqual(data["hello0"]["0"], [0, 0, "any", "any", 0.0])
-        self.assertEqual(data["hello0"]["1"], [0, 0, "any", "any", 0])
-
-        self.assertAlmostEqual(data["hello1"]["0"][-1], 11.7647, 2)  # ((1 / 10) * 100 / 85) *100
-        self.assertAlmostEqual(data["hello1"]["1"][-1], 10.6951, 2)  # ((1 / 11) * 100 / 85) *100
-
-        self.assertAlmostEqual(data["hello2"]["0"][-1], 90.0000, 2)  # ((9 / 10) * 100 / 85) *100
-        self.assertAlmostEqual(data["hello2"]["1"][-1], 55.7275, 2)  # ((9 / 19) * 100 / 85) *100
-
-        self.assertAlmostEqual(data["hello3"]["0"][-1], 100.0000, 2)  # ((10 / 10) * 100 / 85) *100
-        self.assertAlmostEqual(data["hello3"]["1"][-1], 58.8235, 2)  # ((10 / 20) * 100 / 85) *100
-
-        self.assertAlmostEqual(data["hello4"]["0"][-1], 100.0000, 2)  # ((20 / 10) * 100 / 85) *100
-        self.assertAlmostEqual(data["hello4"]["1"][-1], 78.4313, 2)  # ((20 / 30) * 100 / 85) *100
-
-        data = {"hello0": {"0": [1, 0, "any", "any"], "1": [1, 1, "any", "any"]}}
-        data = statistic_v1_to_v2(data, 85.0, 0.0)
-        self.assertAlmostEqual(data["hello0"]["0"][-1], 11.7647, 2)  # ((1 / 10) * 100 / 85) *100
-        self.assertAlmostEqual(data["hello0"]["1"][-1], 10.6951, 2)  # ((1 / 11) * 100 / 85) *100
-
-        data = {"hello0": {"0": [1, 0, "any", "any"], "1": [10, 1, "any", "any"]}}
-        data = statistic_v1_to_v2(data, 0.0, 10.0)
-        self.assertAlmostEqual(data["hello0"]["0"][-1], 90.0000, 2)  # ((1 / 10) * 100 / 85) *100
-        self.assertAlmostEqual(data["hello0"]["1"][-1], 100.0000, 2)  # ((1 / 11) * 100 / 85) *100
-
-    def test_rename_check(self):
-        "Тест на то, что корректно проходит проверка перед переименованием"
-
-        self.load_dict(0, 2)
-
-        try:
-            # пустое новое английское слово
-            self.dict_obj._rename_check("en0", "", "new_ru")
-            self.fail("except not found")
-        except ErrDict:
-            pass
-
-        try:
-            # пустое новое русское слово
-            self.dict_obj._rename_check("en0", "new_en", "")
-            self.fail("except not found")
-        except ErrDict:
-            pass
-
-        try:
-            # старое слово не в списке ключей
-            self.dict_obj._rename_check("en10", "new_en", "new_ru")
-            self.fail("except not found")
-        except ErrDict:
-            pass
-
-        try:
-            # новое слово имеет дубликаты
-            self.dict_obj._rename_check("en0", "EN1", "new_ru")
-            self.fail("except not found")
-        except ErrDict:
-            pass
-
-        # Корректное переименование
-        self.dict_obj._rename_check("en0", "en0", "new_ru")
-        self.dict_obj._rename_check("en0", "new_en", "new_ru")
-
-    def test_rename_in_json_dict(self):
-        "Тест на корректность переименования в словаре, который загрузили из файла"
-        j_dict = self.json_dict(0, 2)
-
-        import copy
-
-        # Старое слово не в базе
-        new_dict = self.dict_obj._rename_in_json_dict("en10", "new_en", "new_tr", "new_ru", copy.deepcopy(j_dict))
-        self.assertEqual(new_dict, [["en0", "tr0", "ru0"], ["en1", "tr1", "ru1"], ["new_en", "new_tr", "new_ru"]])
-
-        # Старое слово в базе
-        new_dict = self.dict_obj._rename_in_json_dict("  en0 ", "new_en", "new_tr", "new_ru", copy.deepcopy(j_dict))
-        self.assertEqual(new_dict, [["new_en", "new_tr", "new_ru"], ["en1", "tr1", "ru1"]])
-
-        # Старое слово в базе
-        new_dict = self.dict_obj._rename_in_json_dict(" En1 ", "new_en", "new_tr", "new_ru", copy.deepcopy(j_dict))
-        self.assertEqual(new_dict, [["en0", "tr0", "ru0"], ["new_en", "new_tr", "new_ru"]])
-
-        # Старое слово в базе и равно новому
-        new_dict = self.dict_obj._rename_in_json_dict(" En1 ", "EN1", "new_tr", "new_ru", copy.deepcopy(j_dict))
-        self.assertEqual(new_dict, [["en0", "tr0", "ru0"], ["EN1", "new_tr", "new_ru"]])
-
-        # # английское слово имеет дубликаты не равные старому слову
-        try:
-            self.dict_obj._rename_in_json_dict("en1", "EN0", "new_tr", "new_ru", copy.deepcopy(j_dict))
-            self.fail("except not found")
-        except ErrDict:
-            pass
-
-    def test_rename_in_dict(self):
-        "Тест на корректность переименования в загруженных данных"
-        self.load_dict(0, 2)
-        old_word = self.dict_obj.get_word_by_key("en0")
-
-        self.dict_obj._rename_in_dict("en0", "new_en", "new_tr", "new_ru")
-
-        new_word = self.dict_obj.get_word_by_key("new_en")
-        self.assertEqual(("new_en", "[%s]" % "new_tr", "new_ru"), new_word.get_show_info())
-        self.assertLoad(1)
-        self.assertEqual(len(self.dict_obj.words), 2)
-        self.assertEqual(old_word is new_word, True)
-
-if __name__ == "__main__":
-    os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    suite = unittest.TestLoader().loadTestsFromTestCase(DictTestCase)
-    unittest.TextTestRunner(verbosity=2).run(suite)

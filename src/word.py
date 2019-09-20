@@ -3,13 +3,19 @@
 import re
 import unittest
 import statistic
+# для статиски - статистика для слова "en_to_ru" йде в словарі під ключом "en_to_ru"
+en_to_ru_write = "en_to_ru"
+# для статиски - статистика для слова "ru_to_en" йде в словарі під ключом "ru_to_en"
+ru_to_en_write = "ru_to_en"
 
-en_to_ru_write = 0
-ru_to_en_write = 1
-
-reg_cmnt = re.compile("\(.*?\)")
-reg_no_sign_part = re.compile("\[.*?\]")
+# якщо в дужках немає | - то це коментарій
+reg_comment = re.compile("\([^|]*?\)")
+# регулярка для заміни виразу в {}
+reg_no_curly_bracket_part = re.compile("\{.*?\}")
+# регулярка для розбиття строки слова на підстроки (по комі)
 reg_split = re.compile("((?:\(.*?\)|[^,])*)")
+
+# те що в дужках із знаком | - остається - працює як (a|b) - a або b
 
 
 class WordInfo:
@@ -29,6 +35,7 @@ class Word:
         -проверять правильность ответа и в зависимости от результата обновлять статистику
         -сериализовать/десериализовать статистику по слову
     """
+
     def __init__(self):
         # Английское слово, которое будет отображаться пользователю
         self.en_word = ""
@@ -57,7 +64,7 @@ class Word:
     def _prepare_show_words(word_list):
         filtered_list = []
         norm_list = []
-        for it in map(lambda x: x.replace("[", "").replace("]", ""), word_list):
+        for it in map(lambda x: x.replace("{", "").replace("}", ""), word_list):
             norm_word = Word._convert_spec_chars(it.lower())
             if norm_word not in norm_list:
                 norm_list.append(norm_word)
@@ -66,8 +73,13 @@ class Word:
 
     def add_value(self, en_word, transcription, ru_word):
         def prepare_word(w):
-            return reg_no_sign_part.sub(".*?", reg_cmnt.sub("", w.lower()).strip())
+            # парситься слово при зчитуванні з словника
+            # (замніяються круглі дужки на "", потім заміняються квадратні дужки на регулярку .*?)
+            prepared = reg_no_curly_bracket_part.sub(".*?", reg_comment.sub("", w.lower()).strip())
+            # print(prepared)
+            return prepared
 
+        # розділяє строку по шаблону на окремі слова
         def split(w):
             return [it.strip() for it in reg_split.split(w) if it.strip() not in (",", "")]
 
@@ -113,16 +125,21 @@ class Word:
     def _check_ru(self, answer):
         answer = Word._convert_spec_chars(answer)
         for it in self.ru_word_list:
+            # print(it, answer)
+            # print(re.match(it + "\Z", answer))
             if re.match(it + "\Z", answer) is not None:
                 return True
         return False
 
     def _check_en(self, answer):
         for it in self.en_word_list:
+            # print(it, answer)
+            # print(re.match(it + "\Z", answer))
             if re.match(it + "\Z", answer) is not None:
                 return True
         return False
 
+# перевірка результату вводу слова
     def check(self, answer, type_pr):
         answer = answer.strip().lower()
         if type_pr == en_to_ru_write:
@@ -153,318 +170,17 @@ class Word:
     def get_stat(self, type_pr):
         return self.stat[type_pr]
 
+# Скоригував - розпаковує статистику для даного слова
     def unpack(self, statistic):
-        for it in statistic:
-            it_int = int(it)
-            if it_int not in self.stat.keys():
-                self.stat[it_int] = statistic.Statistic()
-            self.stat[it_int].unpack(statistic[it])
+        for word in statistic:
+            if word not in self.stat.keys():
+                self.stat[word] = statistic.Statistic()
+            self.stat[word].unpack(statistic[word])
 
+# запаковує статистику для даного слова
     def pack(self):
         data = {}
         for it in self.stat:
             data[it] = self.stat[it].pack()
         return data
 
-
-class WordTestCase(unittest.TestCase):
-    "Набор тестов для класса Word"
-
-    def setUp(self):
-        self.word = Word()
-
-    def test_init(self):
-        "Тест работы конструктора"
-
-        self.assertEqual(self.word.en_word, u"")
-        self.assertEqual(self.word.en_source, u"")
-        self.assertEqual(self.word.en_word_list, [])
-        self.assertEqual(self.word.transcription, u"")
-        self.assertEqual(self.word.ru_word, u"")
-        self.assertEqual(self.word.ru_word_list, [])
-        self.assertEqual(self.word.rating, 0)
-        self.assertEqual(len(self.word.stat), 2)
-        self.assertEqual(self.word.stat[en_to_ru_write], statistic.Statistic())
-        self.assertEqual(self.word.stat[ru_to_en_write], statistic.Statistic())
-
-    def test_add_value(self):
-        "Тест на добавление слова два раза подряд"
-
-        self.word.add_value(u"  Hello  ", u"  \'he\'ləu  ", u"  привет  ")
-        self.assertEqual(self.word.en_word, u"Hello")
-        self.assertEqual(self.word.en_source, u"  Hello  ")
-        self.assertEqual(self.word.en_word_list, [u"hello"])
-        self.assertEqual(self.word.transcription, u"[\'he\'ləu]")
-        self.assertEqual(self.word.ru_word, u"привет")
-        self.assertEqual(self.word.ru_word_list, [u"привет"])
-
-        self.word.add_value(u"  Hello  ", u"  \'he\'ləu  ", u"  приветствие  ")
-        self.assertEqual(self.word.en_word, u"Hello")
-        self.assertEqual(self.word.en_source, u"  Hello  ")
-        self.assertEqual(self.word.en_word_list, [u"hello"])
-        self.assertEqual(self.word.transcription, u"[\'he\'ləu]")
-        self.assertEqual(self.word.ru_word, u"привет, приветствие")
-        self.assertEqual(self.word.ru_word_list, [u"привет", u"приветствие"])
-
-    def test_add_value_with_empty_transcription(self):
-        "Тест на добавление слова с пустой транскрипцией"
-
-        self.word.add_value(u"  Hello  ", u"", u"  привет  ")
-        self.assertEqual(self.word.en_word, u"Hello")
-        self.assertEqual(self.word.en_source, u"  Hello  ")
-        self.assertEqual(self.word.en_word_list, [u"hello"])
-        self.assertEqual(self.word.transcription, u"")
-        self.assertEqual(self.word.ru_word, u"привет")
-        self.assertEqual(self.word.ru_word_list, [u"привет"])
-
-    def test_add_value_double_ru(self):
-        "Тест на добавление слова с двойным русским переводом два раза подряд (во второй раз с пустой транскрипцией)"
-
-        self.word.add_value(u"  Hello  ", u"  \'he\'ləu  ", u"  привет, алло  ")
-        self.assertEqual(self.word.en_word, u"Hello")
-        self.assertEqual(self.word.en_source, u"  Hello  ")
-        self.assertEqual(self.word.en_word_list, [u"hello"])
-        self.assertEqual(self.word.transcription, u"[\'he\'ləu]")
-        self.assertEqual(self.word.ru_word, u"привет, алло")
-        self.assertEqual(self.word.ru_word_list, [u"привет", u"алло"])
-
-        self.word.add_value(u"  Hello  ", None, u"  приветствие, оклик  ")
-        self.assertEqual(self.word.en_word, u"Hello")
-        self.assertEqual(self.word.en_source, u"  Hello  ")
-        self.assertEqual(self.word.en_word_list, [u"hello"])
-        self.assertEqual(self.word.transcription, u"[\'he\'ləu]")
-        self.assertEqual(self.word.ru_word, u"привет, алло, приветствие, оклик")
-        self.assertEqual(self.word.ru_word_list, [u"привет", u"алло", u"приветствие", u"оклик"])
-
-    def test_add_value_cmnt(self):
-        "Тест на корректную обработку комментариев в английском и русском словах"
-
-        self.word.add_value(u"  Hello (Comment) ,  Hi  ", u"  \'he\'ləu  ", u"  привет (Здоровается) ,  алло  ")
-        self.assertEqual(self.word.en_word, u"Hello (Comment), Hi")
-        self.assertEqual(self.word.en_source, u"  Hello (Comment) ,  Hi  ")
-        self.assertEqual(self.word.en_word_list, [u"hello", u"hi"])
-        self.assertEqual(self.word.transcription, u"[\'he\'ləu]")
-        self.assertEqual(self.word.ru_word, u"привет (Здоровается), алло")
-        self.assertEqual(self.word.ru_word_list, [u"привет", u"алло"])
-
-    def test_add_value_ru_cmnt_with_comma(self):
-        "Тест на обработку русских комментариев с запятыми"
-        self.word.add_value(u"hijacking", u"", u"угон (самолета, судна, автомобиля), кража (из автомобиля)")
-
-        self.assertEqual(self.word.en_word, u"hijacking")
-        self.assertEqual(self.word.en_source, u"hijacking")
-        self.assertEqual(self.word.en_word_list, [u"hijacking"])
-        self.assertEqual(self.word.transcription, u"")
-        self.assertEqual(self.word.ru_word, u"угон (самолета, судна, автомобиля), кража (из автомобиля)")
-        self.assertEqual(self.word.ru_word_list, [u"угон", u"кража"])
-
-    def test_add_value_en_cmnt_with_comma(self):
-        "Тест на обработку английских комментариев с запятыми"
-        self.word.add_value(u"hello (hello1, hello2, hello3), hi (hi1, hi2)", u"", u"привет")
-
-        self.assertEqual(self.word.en_word, u"hello (hello1, hello2, hello3), hi (hi1, hi2)")
-        self.assertEqual(self.word.en_source, u"hello (hello1, hello2, hello3), hi (hi1, hi2)")
-        self.assertEqual(self.word.en_word_list, [u"hello", u"hi"])
-        self.assertEqual(self.word.transcription, u"")
-        self.assertEqual(self.word.ru_word, u"привет")
-        self.assertEqual(self.word.ru_word_list, [u"привет"])
-
-    def test_add_value_no_sign_part(self):
-        "Тест на корректную обработку необязательных частей в англиском и русском словах"
-
-        self.word.add_value(u"  He[llo], H[al]l[o]  ", u"  \'he\'ləu  ", u"привет[ствие],ок[лик]ат[ь]")
-        self.assertEqual(self.word.en_word, u"Hello, Hallo")
-        self.assertEqual(self.word.en_source, u"  He[llo], H[al]l[o]  ")
-        self.assertEqual(self.word.en_word_list, [u"he.*?", u"h.*?l.*?"])
-        self.assertEqual(self.word.transcription, u"[\'he\'ləu]")
-        self.assertEqual(self.word.ru_word, u"приветствие, окликать")
-        self.assertEqual(self.word.ru_word_list, [u"привет.*?", u"ок.*?ат.*?"])
-
-    def test_add_value_with_duplicate(self):
-        "Тест на добавление слова множество раз, причем русские перевод - дублируются"
-
-        self.word.add_value(u"Hello", u"  \'he\'ləu  ", u"привет")
-        self.word.add_value(u"Hello", u"  \'he\'ləu  ", u"привет")
-        self.word.add_value(u"Hello", u"  \'he\'ləu  ", u"пРивет")
-        self.word.add_value(u"Hello", u"  \'he\'ləu  ", u"пРиВет")
-        self.word.add_value(u"Hello", u"  \'he\'ləu  ", u"пРи[Вет]")
-        self.word.add_value(u"Hello", u"  \'he\'ləu  ", u"пРиВет(1)")
-        self.word.add_value(u"Hello", u"  \'he\'ləu  ", u"пРиВет(1)")
-        self.assertEqual(self.word.en_word, u"Hello")
-        self.assertEqual(self.word.en_source, u"Hello")
-        self.assertEqual(self.word.en_word_list, [u"hello"])
-        self.assertEqual(self.word.transcription, u"[\'he\'ləu]")
-        self.assertEqual(self.word.ru_word, u"привет, пРиВет(1)")
-        self.assertEqual(self.word.ru_word_list, [u"привет", u"привет", u"привет",
-                                                  u"привет", u"при.*?", u"привет", u"привет"])
-
-    def test_rename(self):
-        "Тест на переименование слова"
-
-        self.word.add_value(u"Hello", u"\'he\'ləu", u"привет")
-        self.word.rating = 5
-        self.word.update_stat(True, 50, en_to_ru_write)
-        self.word.update_stat(False, -10, en_to_ru_write)
-        self.word.update_stat(True, 40, ru_to_en_write)
-        self.word.update_stat(False, -20, ru_to_en_write)
-        import copy
-        old_stat_en = copy.deepcopy(self.word.stat[en_to_ru_write])
-        old_stat_ru = copy.deepcopy(self.word.stat[ru_to_en_write])
-
-        self.word.rename(u"Cup", u"kʌp", u"Чашка")
-        self.assertEqual(self.word.en_word, u"Cup")
-        self.assertEqual(self.word.en_source, u"Cup")
-        self.assertEqual(self.word.en_word_list, [u"cup"])
-        self.assertEqual(self.word.transcription, u"[kʌp]")
-        self.assertEqual(self.word.ru_word, u"Чашка")
-        self.assertEqual(self.word.ru_word_list, [u"чашка"])
-        self.assertEqual(self.word.rating, 5)
-        self.assertEqual(self.word.stat[en_to_ru_write], old_stat_en)
-        self.assertEqual(self.word.stat[ru_to_en_write], old_stat_ru)
-
-    def test_rating(self):
-        "Тест на установку рейтинга слова"
-
-        rating = 51.879
-        self.word.set_rating(rating)
-        self.assertEqual(self.word.get_rating(), rating)
-
-    def test_question_data(self):
-        "Тест на работу функции question_data"
-
-        self.word.add_value(u"Hello", u"\'he\'ləu", u"привет")
-        self.assertEqual(self.word.question_data(en_to_ru_write), WordInfo(u"Hello", u"[\'he\'ləu]"))
-        self.assertEqual(self.word.question_data(ru_to_en_write), WordInfo(u"привет", u""))
-
-    def test_check(self):
-        "Тест на то, что многовариантные слова на аглийском и русском, правильно проходят проверку"
-
-        self.word.add_value(u"Hello, Hallo", u"  \'he\'ləu  ", u"привет,алло")
-
-        ru_ans = WordInfo(u"привет, алло", u"")
-        self.assertEqual(self.word.check(u"  ПРИВЕТ    ", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"  АЛЛО      ", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"error_answer", en_to_ru_write), (False, ru_ans))
-
-        en_ans = WordInfo(u"Hello, Hallo", u"[\'he\'ləu]")
-        self.assertEqual(self.word.check(u"  HELLO     ", ru_to_en_write), (True, en_ans))
-        self.assertEqual(self.word.check(u"  HALLO     ", ru_to_en_write), (True, en_ans))
-        self.assertEqual(self.word.check(u"error_answer", ru_to_en_write), (False, en_ans))
-
-    def test_check_cmnt(self):
-        "Тест на то, что слова на аглийском и русском с комментариями, правильно проходят проверку"
-
-        self.word.add_value(u"Hello(Comment), Hallo", u"  \'he\'ləu  ", u"привет(Здоровается),алло")
-
-        ru_ans = WordInfo(u"привет(Здоровается), алло", u"")
-        self.assertEqual(self.word.check(u"  ПРИВЕТ    ", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"  АЛЛО      ", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"error_answer", en_to_ru_write), (False, ru_ans))
-
-        en_ans = WordInfo(u"Hello(Comment), Hallo", u"[\'he\'ləu]")
-        self.assertEqual(self.word.check(u"  HELLO     ", ru_to_en_write), (True, en_ans))
-        self.assertEqual(self.word.check(u"  HALLO     ", ru_to_en_write), (True, en_ans))
-        self.assertEqual(self.word.check(u"error_answer", ru_to_en_write), (False, en_ans))
-
-    def test_check_no_sign_part(self):
-        "Тест на то, что слова на аглийском и русском с необязательными частями, правильно проходят проверку"
-
-        self.word.add_value(u"  He[llo], H[al]l[o]  ", u"  \'he\'ləu  ", u"привет[ствие],ок[лик]ат[ь]")
-
-        ru_ans = WordInfo(u"приветствие, окликать", u"")
-        self.assertEqual(self.word.check(u"привет        ", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"приветaddtext ", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"окат          ", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"окликaddатadd]", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"привит        ", en_to_ru_write), (False, ru_ans))
-        self.assertEqual(self.word.check(u"окар          ", en_to_ru_write), (False, ru_ans))
-
-        en_ans = WordInfo(u"Hello, Hallo", u"[\'he\'ləu]")
-        self.assertEqual(self.word.check(u"HELLO    ", ru_to_en_write), (True, en_ans))
-        self.assertEqual(self.word.check(u"HELLO123 ", ru_to_en_write), (True, en_ans))
-        self.assertEqual(self.word.check(u"HE123    ", ru_to_en_write), (True, en_ans))
-        self.assertEqual(self.word.check(u"HALLO    ", ru_to_en_write), (True, en_ans))
-        self.assertEqual(self.word.check(u"HL       ", ru_to_en_write), (True, en_ans))
-        self.assertEqual(self.word.check(u"H123     ", ru_to_en_write), (False, en_ans))
-        self.assertEqual(self.word.check(u"123l123  ", ru_to_en_write), (False, en_ans))
-
-    def test_check_special_char_in_word(self):
-        "Тест на то, что слова со спец. символами в переводе правильно проходят проверку"
-
-        self.word.add_value(u"Yellow", u"", u"жёлтый")
-        ru_ans = WordInfo(u"жёлтый", u"")
-        self.assertEqual(self.word.check(u"желтый", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"жёлтый", en_to_ru_write), (True, ru_ans))
-
-    def test_check_special_char_in_answer(self):
-        "Тест на то, что слова со спец. символами в ответе правильно проходят проверку"
-
-        self.word.add_value(u"Yellow", u"", u"желтый")
-        ru_ans = WordInfo(u"желтый", u"")
-        self.assertEqual(self.word.check(u"желтый", en_to_ru_write), (True, ru_ans))
-        self.assertEqual(self.word.check(u"жёлтый", en_to_ru_write), (True, ru_ans))
-
-    def test_get_show_info(self):
-        "Тест функции get_show_info"
-
-        self.word.add_value(u"Hel[lo]", u"\'he\'ləu", u"привет, приветствие")
-        self.assertEqual(self.word.get_show_info(), (u"Hello", u"[\'he\'ləu]", u"привет, приветствие"))
-
-    def test_get_source_info(self):
-        "Тест функции get_source_info"
-
-        self.word.add_value(u"Hel[lo]", u"\'he\'ləu", u"привет, приветствие")
-        self.assertEqual(self.word.get_source_info(), (u"Hel[lo]", u"\'he\'ləu", u"привет, приветствие"))
-
-    def test_is_load(self):
-        "Тест на работу функции is_load"
-
-        self.assertEqual(self.word.is_load(), False)
-
-        self.word.add_value(u"Hello", u"", u"привет")
-        self.assertEqual(self.word.is_load(), True)
-
-    def test_unpack(self):
-        "Тест на работу функции unpack"
-
-        import datetime
-        today = datetime.date.today().strftime("%Y.%m.%d")
-        statistic_in = {str(en_to_ru_write): [2, 3, today, False, 30], str(ru_to_en_write): [2, 2, today, False, 40]}
-
-        st0 = statistic.Statistic()
-        st0.update(True, 50)
-        st0.update(False, -10)
-        st0.update(False, -10)
-        st0.update(True, 10)
-        st0.update(False, -10)
-
-        st1 = statistic.Statistic()
-        st1.update(True, 50)
-        st1.update(False, -10)
-        st1.update(True, 10)
-        st1.update(False, -10)
-
-        self.word.unpack(statistic_in)
-        self.assertEqual(self.word.stat[en_to_ru_write], st0)
-        self.assertEqual(self.word.stat[ru_to_en_write], st1)
-
-    def test_pack(self):
-        "Тест на работу функции pack"
-
-        import datetime
-        today = datetime.date.today().strftime("%Y.%m.%d")
-        statistic_out = {en_to_ru_write: [1, 2, today, False, 30], ru_to_en_write: [2, 1, today, True, 20]}
-        self.word.update_stat(True, 50, en_to_ru_write)
-        self.word.update_stat(False, -10, en_to_ru_write)
-        self.word.update_stat(False, -10, en_to_ru_write)
-        self.word.update_stat(False, -10, ru_to_en_write)
-        self.word.update_stat(True, 10, ru_to_en_write)
-        self.word.update_stat(True, 10, ru_to_en_write)
-        self.assertEqual(self.word.pack(), statistic_out)
-
-if __name__ == "__main__":
-    import os
-    import os.path
-    os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    suite = unittest.TestLoader().loadTestsFromTestCase(WordTestCase)
-    unittest.TextTestRunner(verbosity=2).run(suite)

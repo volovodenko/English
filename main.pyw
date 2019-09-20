@@ -29,7 +29,9 @@ def run_main():
     # si
 
     import src.app
+    # якщо запуск іде не з директорії проги, то зайти в директорію
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    # створити екземляр класа Арр
     src.app.App()
 
 

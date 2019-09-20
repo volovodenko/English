@@ -50,7 +50,7 @@ class Practice:
 class Lesson:
     def __init__(self, cfg):
         random.seed()
-        self.type_pr = random.choice([word.en_to_ru_write, word.ru_to_en_write])
+        # self.type_pr = random.choice([word.en_to_ru_write, word.ru_to_en_write])
         self.dict = dictionary.Dict(cfg)
         self.right_answer_percent = cfg["right_answer_percent"]
         self.wrong_answer_percent = cfg["wrong_answer_percent"]
@@ -61,6 +61,9 @@ class Lesson:
         self.practice_list = []
         self.dict.reload_dict(cfg["path_to_dict"])
         self.dict.reload_stat(self.path_to_stat)
+
+        # тип урока
+        self.type_pr = self.dict.type_pr
         words = self.dict.words_for_lesson(cfg["CntStudyWords"], self.type_pr)
         self.lsn_words = lesson_words.LessonWords(words)
 

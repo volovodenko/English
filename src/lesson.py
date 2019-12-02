@@ -64,8 +64,8 @@ class Lesson:
 
         # тип урока
         self.type_pr = self.dict.type_pr
-        words = self.dict.words_for_lesson(cfg["CntStudyWords"], self.type_pr)
-        self.lsn_words = lesson_words.LessonWords(words)
+        words = self.dict.words_for_lesson(cfg["CntStudyWords"], self.max_success, self.type_pr)
+        self.lsn_words = lesson_words.LessonWords(words, self.type_pr, self.max_success)
 
     def get_dict(self):
         return self.dict

@@ -9,6 +9,7 @@ import global_stat
 import unittest
 import codecs
 import re
+import datetime
 
 reg_cmnt = re.compile(r"/\*.*?\*/", re.DOTALL)
 
@@ -45,8 +46,10 @@ def statistic_v1_to_v2(data, min_percent, min_success_cnt):
 class DictJSONEncoder(json.JSONEncoder):
 
     def __init__(self, skipkeys, ensure_ascii, check_circular, allow_nan, indent, separators, encoding, default):
-        json.JSONEncoder.__init__(self, skipkeys=False, ensure_ascii=False, check_circular=False, allow_nan=True,
-                                  sort_keys=False, indent=4, separators=(", ", ": "), encoding="utf-8", default=None)
+        json.JSONEncoder.__init__(self, skipkeys = False, ensure_ascii = False, check_circular = False,
+                                  allow_nan = True,
+                                  sort_keys = False, indent = 4, separators = (", ", ": "), encoding = "utf-8",
+                                  default = None)
 
     def _iterencode_list_lvl2(self, lst, max_len_lst):
         if len(lst) not in (2, 3):
@@ -125,7 +128,7 @@ class Dict:
         self.reload_dict_from_json(self.load_dict_as_json(path))
 
     def save_dict(self, path, json_dict):
-        json.dump(json_dict, codecs.open(path, "w", "utf-8"), cls=DictJSONEncoder)
+        json.dump(json_dict, codecs.open(path, "w", "utf-8"), cls = DictJSONEncoder)
 
     def make_json_from_dict(self, keys):
         if keys is None:
@@ -168,7 +171,7 @@ class Dict:
         stat_json = {"version": 2, "data": data, "type": type_pr}
         # print stat_json
         # indent=2 - 2 символа відступів в файлі
-        json.dump(stat_json, open(path, "wb"), indent=2, sort_keys=True)
+        json.dump(stat_json, open(path, "wb"), indent = 2, sort_keys = True)
 
     def global_statistic(self):
         stat = global_stat.GlobalStatistic()
@@ -232,24 +235,36 @@ class Dict:
     def _loaded_words(self, type_pr):
         return [(it, it.get_stat(type_pr)) for it in self.words.values() if it.is_load()]
 
-    def words_for_lesson(self, cnt_study_words, type_pr):
-        learned_words = []
+    def words_for_lesson(self, cnt_study_words, words_per_lesson, type_pr):
+        all_learned_words = []
         studied_words = []
+        # today = datetime.date.today()
+
         for wrd, stat in self._loaded_words(type_pr):
             if stat.get_total_answer() > 0:
+                # Прасинг дати із строки
+                # last_lesson_date = datetime.datetime.strptime(stat.get_last_lesson_date(), "%Y.%m.%d").date()
+
                 if stat.get_study_percent() >= 100.0:
-                    learned_words.append(wrd)
+                    all_learned_words.append(wrd)
                 else:
                     studied_words.append(wrd)
 
+        # сортую по даті, по збільшенню дати, - перші самі давніші
+        all_learned_words.sort(key = lambda it: it.get_stat(type_pr).get_last_lesson_date())
+
+        # беру лише необхідну к-сть перших слів (не більше 10% від слів на урок)
+        learned_words = all_learned_words[:int(round(words_per_lesson * 0.1))]
+
         # дополняем изучаемыми/изученными словами из другого направления перевода
-        if len(studied_words) < cnt_study_words:
-            inv_type_pr = word.ru_to_en_write if type_pr == word.en_to_ru_write else word.en_to_ru_write
-            for wrd, stat in self._loaded_words(inv_type_pr):
-                if stat.get_total_answer() > 0 and wrd not in (learned_words + studied_words):
-                    studied_words.append(wrd)
-                    if len(studied_words) == cnt_study_words:
-                        break
+        # я закоментував - мені це не потрібно
+        # if len(studied_words) < cnt_study_words:
+        #     inv_type_pr = word.ru_to_en_write if type_pr == word.en_to_ru_write else word.en_to_ru_write
+        #     for wrd, stat in self._loaded_words(inv_type_pr):
+        #         if stat.get_total_answer() > 0 and wrd not in (learned_words + studied_words):
+        #             studied_words.append(wrd)
+        #             if len(studied_words) == cnt_study_words:
+        #                 break
 
         # дополняем ни разу не изучаемыми словами
         if len(studied_words) < cnt_study_words:
@@ -259,11 +274,13 @@ class Dict:
                     if len(studied_words) == cnt_study_words:
                         break
 
-        studied_words.sort(key=lambda it: it.get_stat(type_pr).get_success_percent())
+        studied_words.sort(key = lambda it: it.get_stat(type_pr).get_success_percent())
         studied_words = studied_words[:cnt_study_words]
 
         lesson_words = learned_words + studied_words
+
         for it in lesson_words:
             rating = it.get_stat(type_pr).calc_rating()
             it.set_rating(rating)
+
         return lesson_words

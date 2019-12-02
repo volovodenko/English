@@ -56,6 +56,9 @@ class Statistic:
     def is_new(self):
         return self.get_total_answer() == 0
 
+    def get_last_lesson_date(self):
+        return self.last_lesson_date
+
     def calc_rating(self):
         perc = self.get_success_percent()
 

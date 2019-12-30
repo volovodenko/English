@@ -238,6 +238,7 @@ class Dict:
     def words_for_lesson(self, cnt_study_words, words_per_lesson, type_pr):
         all_learned_words = []
         studied_words = []
+        count_learned_words = int(round(words_per_lesson * 0.1))
         # today = datetime.date.today()
 
         for wrd, stat in self._loaded_words(type_pr):
@@ -254,7 +255,7 @@ class Dict:
         all_learned_words.sort(key = lambda it: it.get_stat(type_pr).get_last_lesson_date())
 
         # беру лише необхідну к-сть перших слів (не більше 10% від слів на урок)
-        learned_words = all_learned_words[:int(round(words_per_lesson * 0.1))]
+        learned_words = all_learned_words[:count_learned_words]
 
         # дополняем изучаемыми/изученными словами из другого направления перевода
         # я закоментував - мені це не потрібно
@@ -267,17 +268,34 @@ class Dict:
         #                 break
 
         # дополняем ни разу не изучаемыми словами
-        if len(studied_words) < cnt_study_words:
+        if len(learned_words + studied_words) < cnt_study_words:
             for wrd, stat in self._loaded_words(type_pr):
                 if stat.get_total_answer() == 0 and wrd not in (learned_words + studied_words):
                     studied_words.append(wrd)
-                    if len(studied_words) == cnt_study_words:
+                    if len(studied_words) == cnt_study_words - len(studied_words):
                         break
 
-        studied_words.sort(key = lambda it: it.get_stat(type_pr).get_success_percent())
-        studied_words = studied_words[:cnt_study_words]
+        # дополняем изучеными словами
+        if len(learned_words + studied_words) < cnt_study_words:
+            lw = self._loaded_words(self.type_pr)
+            lw.sort(key = lambda (it, stat): stat.get_last_lesson_date())
 
-        lesson_words = learned_words + studied_words
+            for (wrd, stat) in lw:
+                if stat.get_study_percent() >= 100 and wrd not in (learned_words + studied_words):
+                    studied_words.append(wrd)
+                    if len(learned_words + studied_words) == cnt_study_words:
+                        break
+
+        # сортую по success_percent
+        studied_words.sort(key = lambda it: it.get_stat(type_pr).get_success_percent())
+        # обрізаю
+        studied_words = studied_words[:cnt_study_words - count_learned_words]
+
+        lesson_words = learned_words + studied_words[:cnt_study_words-len(learned_words)]
+
+        # - убрати
+        # print(len(lesson_words), len(learned_words), len(studied_words))
+        # exit(1)
 
         for it in lesson_words:
             rating = it.get_stat(type_pr).calc_rating()

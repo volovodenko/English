@@ -23,13 +23,10 @@ class LessonWords:
         self.set_words()
 
     def get_any_word(self):
-        cnt_first_word = len(self.first_words)
-        cnt_remaining_words = len(self.remaining_words)
-
-        if cnt_first_word == 0 and cnt_remaining_words > 0:
+        if len(self.words) == 0 and len(self.remaining_words) > 0:
             self.words = self.remaining_words
 
-        if cnt_first_word == 0 and cnt_remaining_words == 0:
+        if len(self.words) == 0 and len(self.remaining_words) == 0:
             self.set_words()
 
         # if cnt_word == 1:

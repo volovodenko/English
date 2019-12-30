@@ -101,7 +101,7 @@ class Statistic:
         # в statistic список(массив) статистики для слова
         # pluck(statistic, 'success_answer', 'error_answer', 'last_lesson_date', 'last_lesson_result', 'study_percent')
 
-# упаковка даних статистики в список(масив) для даного слова,  даного напрямку перекладу
+    # упаковка даних статистики в список(масив) для даного слова,  даного напрямку перекладу
     def pack(self):
         return [
             self.success_answer,
@@ -109,7 +109,8 @@ class Statistic:
             self.last_lesson_date,
             self.last_lesson_result,
             self.study_percent
-        ]
+            ]
+
         # {
         #     'success_answer': self.success_answer,
         #     'error_answer': self.error_answer,

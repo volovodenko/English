@@ -1,6 +1,6 @@
 {
   "empty_answer_is_error": "yes",
-  "path_to_dict": "my2Dict.json5",
+  "path_to_dict": "my3Dict.json5",
   "words_per_lesson": 40,
   "CntStudyWords": 100,
   "stat_count_row": 25,

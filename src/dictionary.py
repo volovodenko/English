@@ -122,7 +122,10 @@ class Dict:
         txt = open(path).read()
         txt = reg_cmnt.sub("", txt)  # remove comments
 
-        return json.loads(txt)
+        try:
+            return json.loads(txt)
+        except ValueError as e:
+            print("error at", e)
 
     def reload_dict(self, path):
         self.reload_dict_from_json(self.load_dict_as_json(path))

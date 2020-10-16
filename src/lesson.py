@@ -57,10 +57,10 @@ class Lesson:
         self.max_success = cfg["words_per_lesson"]
         self.cnt_success = 0
         self.cnt_error = 0
-        self.path_to_stat = cfg["path_to_stat"]
+        self.path_to_statistics_folder = cfg["path_to_statistics_folder"]
         self.practice_list = []
-        self.dict.reload_dict(cfg["path_to_dict"])
-        self.dict.reload_stat(self.path_to_stat)
+        self.dict.reload_dict(cfg["path_to_dictionaries_folder"])
+        self.dict.reload_stat(self.path_to_statistics_folder)
 
         # тип урока
         self.type_pr = self.dict.type_pr
@@ -77,12 +77,12 @@ class Lesson:
             self.cnt_error += 1
 
     def end_lesson(self):
-        self.dict.reload_stat(self.path_to_stat)
+        self.dict.reload_stat(self.path_to_statistics_folder)
 
         for it in self.practice_list:
             it.update_stat(self.right_answer_percent, self.wrong_answer_percent)
 
-        self.dict.save_stat(self.path_to_stat)
+        self.dict.save_stat(self.path_to_statistics_folder)
 
     def get_next_practice(self):
         pr = Practice(self, self.lsn_words.get_any_word(), self.type_pr)

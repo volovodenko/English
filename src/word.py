@@ -55,6 +55,8 @@ class Word:
         self.rating = 0
         # Ссылка на статистику по слову
         self.stat = {en_to_ru_write: statistic.Statistic(), ru_to_en_write: statistic.Statistic()}
+        # Название словаря в котором находиться слово
+        self.dictionary_name = ""
 
     @staticmethod
     def _convert_spec_chars(s):
@@ -71,7 +73,7 @@ class Word:
                 filtered_list.append(it)
         return ", ".join(filtered_list)
 
-    def add_value(self, en_word, transcription, ru_word):
+    def add_value(self, en_word, transcription, ru_word, dictionary_name):
         def prepare_word(w):
             # парситься слово при зчитуванні з словника
             # (замніяються круглі дужки на "", потім заміняються квадратні дужки на регулярку .*?)
@@ -95,6 +97,8 @@ class Word:
         self.ru_word = Word._prepare_show_words(self.ru_source)
         self.ru_word_list = map(lambda x: Word._convert_spec_chars(prepare_word(x)), self.ru_source)
 
+        self.dictionary_name = dictionary_name
+
     def rename(self, en_word, transcription, ru_word):
         "Переименовать слово, не касаясь статистики, рейтинга и др. служебных данных"
         self.en_word = ""
@@ -115,8 +119,8 @@ class Word:
         "Получение отображаемых в вопросе данных по слову"
         if type_pr == en_to_ru_write:
             return WordInfo(self.en_word, self.transcription)
-        else:
-            return WordInfo(self.ru_word, "")
+
+        return WordInfo(self.ru_word, "")
 
     def is_new(self, type_pr):
         "Возвращает True, если слово еще не изучалось"

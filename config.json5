@@ -3,16 +3,16 @@
         Путь к словарю
         Нужно указывать либо полный путь, либо относительно main.pyw
     */
-    "path_to_dict": "dict.json"
+    "path_to_dictionaries_folder": "dictionaries",
     /*
         Путь к файлу для сохранения статистики
         Нужно указывать либо полный путь, либо относительно main.pyw
     */
-    ,"path_to_stat": "statistic.json"
+    "path_to_statistics_folder": "statistics",
     /*
         Кол-во успешных ответов, после которого урок завершится
     */
-    ,"words_per_lesson": 5
+    "words_per_lesson": 5
     /*
         Кол-во слов изучаемых одновременно
     */

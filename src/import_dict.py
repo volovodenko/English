@@ -20,7 +20,7 @@ class ImportDict:
         cfg = Config()
         cfg.reload()
         dictionary = Dict(cfg)
-        json_dict = dictionary.load_dict_as_json(cfg["path_to_dict"])
+        json_dict = dictionary.load_dictionary_as_json(cfg["path_to_dict"])
 
         if type_import == "lingualeo":
             json_add_dict = self._lingualeo(path)

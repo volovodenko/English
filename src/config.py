@@ -12,24 +12,25 @@ reg_cmnt = re.compile(r"/\*.*?\*/", re.DOTALL)
 class Config:
     "Работа с конфигурационным файлом"
 
-    def __init__(self, main_path=None, user_path=None):
-        if main_path is None:
-            self._main_path = "config.json5"
-        else:
-            self._main_path = main_path
-        if user_path is None:
-            self._user_path = "config_user.json5"
-        else:
-            self._user_path = user_path
-        self._cfg_dict = {}
+    def __init__(self, main_config_path = None, user_config_path = None):
+        self._main_config_path = main_config_path
+        self._user_config_path = user_config_path
+
+        if main_config_path is None:
+            self._main_config_path = "config.json5"
+
+        if user_config_path is None:
+            self._user_config_path = "config_user.json5"
+
+        self._config_dictionary = {}
 
     def __getitem__(self, key):
-        return self._cfg_dict[key]
+        return self._config_dictionary[key]
 
     def __len__(self):
-        return len(self._cfg_dict)
+        return len(self._config_dictionary)
 
-    def _load_json(self, path):
+    def _load_config_file(self, path):
         data = {}
         if os.path.exists(path):
             txt = open(path).read()
@@ -37,9 +38,9 @@ class Config:
             data = json.loads(txt)
         return data
 
-    def _set_default(self, cfg):
-        cfg["path_to_dict"] = cfg.get("path_to_dict", "dict.json")
-        cfg["path_to_stat"] = cfg.get("path_to_stat", "statistic.json")
+    def _set_default_config(self, cfg):
+        cfg["path_to_dictionaries_folder"] = cfg.get("path_to_dictionaries_folder", "dictionaries")
+        cfg["path_to_dictionaries_folder"] = cfg.get("path_to_dictionaries_folder", "statistics")
         cfg["words_per_lesson"] = int(cfg.get("words_per_lesson", 5))
         cfg["CntStudyWords"] = int(cfg.get("CntStudyWords", 50))
         cfg["MinPercent"] = float(cfg.get("MinPercent", 97.0))
@@ -52,18 +53,21 @@ class Config:
         cfg["wrong_answer_percent"] = float(cfg.get("wrong_answer_percent", 40.0))
         cfg["empty_answer_is_error"] = cfg.get("empty_answer_is_error", "no")
         cfg["internet_dictionary_url"] = cfg.get("internet_dictionary_url",
-                                                 {"EN_RU": "http://slovari.yandex.ru/{word}/en-ru/#lingvo/",
-                                                  "RU_EN": "http://slovari.yandex.ru/{word}/en/#lingvo/"})
+                                                 {
+                                                     "EN_RU": "http://slovari.yandex.ru/{word}/en-ru/#lingvo/",
+                                                     "RU_EN": "http://slovari.yandex.ru/{word}/en/#lingvo/"
+                                                     })
 
     def create_default_user_config(self):
-        if not os.path.isfile(self._user_path):
+        if not os.path.isfile(self._user_config_path):
             txt = "{\n    /*\n        User config\n    */\n\n}"
-            open(self._user_path, "wt").write(txt)
+            open(self._user_config_path, "wt").write(txt)
 
     def reload(self):
-        self._cfg_dict = {}
-        self._cfg_dict.update(self._load_json(self._main_path))
-        self._cfg_dict.update(self._load_json(self._user_path))
-        self._set_default(self._cfg_dict)
-        return self._cfg_dict
+        self._config_dictionary = {}
+        self._config_dictionary.update(self._load_config_file(self._main_config_path))
+        self._config_dictionary.update(self._load_config_file(self._user_config_path))
 
+        self._set_default_config(self._config_dictionary)
+
+        return self._config_dictionary

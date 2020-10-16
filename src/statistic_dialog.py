@@ -190,7 +190,7 @@ def run_exclusive():
     from dictionary import Dict
     dictionary = Dict(cfg)
     dictionary.reload_dict(cfg["path_to_dict"])
-    dictionary.reload_stat(cfg["path_to_stat"])
+    dictionary.reload_stat(cfg["path_to_dictionaries_folder"])
 
     from oper_factory import OperationFactory
     factory = OperationFactory()

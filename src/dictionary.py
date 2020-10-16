@@ -3,7 +3,7 @@
 import os
 import os.path
 import json
-import json.encoder
+# import json.encoder
 import word
 import global_stat
 import unittest
@@ -11,7 +11,7 @@ import codecs
 import re
 import datetime
 
-reg_cmnt = re.compile(r"/\*.*?\*/", re.DOTALL)
+reg_comments = re.compile(r"/\*.*?\*/", re.DOTALL)
 
 
 class ErrDict(Exception):
@@ -108,27 +108,34 @@ class Dict:
             w = self.words[en] = word.Word()
         return w
 
-    def reload_dict_from_json(self, json_dict):
-        self.words = {}
-        for it in json_dict:
-            if len(it) == 3:
-                en, tr, ru = it
+    def reload_dict_from_json(self, dictionary_data, dictionary_name):
+        for current_word in dictionary_data:
+            if len(current_word) == 3:
+                en, tr, ru = current_word
             else:
-                en, ru = it
+                en, ru = current_word
                 tr = ""
-            self.get_word_by_key(en).add_value(en, tr, ru)
+            self.get_word_by_key(en).add_value(en, tr, ru, dictionary_name)
 
-    def load_dict_as_json(self, path):
+    def load_dictionary_as_json(self, path):
         txt = open(path).read()
-        txt = reg_cmnt.sub("", txt)  # remove comments
+        txt = reg_comments.sub("", txt)  # remove comments
 
         try:
             return json.loads(txt)
         except ValueError as e:
             print("error at", e)
 
-    def reload_dict(self, path):
-        self.reload_dict_from_json(self.load_dict_as_json(path))
+    def reload_dict(self, path_to_dictionaries_folder):
+        self.words = {}
+        files = [f for f in os.listdir(path_to_dictionaries_folder) if
+                 os.path.isfile(os.path.join(path_to_dictionaries_folder, f))]
+
+        for file_name in files:
+            self.reload_dict_from_json(
+                self.load_dictionary_as_json(path_to_dictionaries_folder + '/' + file_name),
+                file_name
+                )
 
     def save_dict(self, path, json_dict):
         json.dump(json_dict, codecs.open(path, "w", "utf-8"), cls = DictJSONEncoder)
@@ -140,23 +147,29 @@ class Dict:
         return [list(w.get_source_info()) for w in words if w]
 
     # обробка даних файла статистики
-    def _reload_stat_from_json(self, json_stat):
-        version = json_stat["version"]
+    def _reload_stat_from_json(self, json_stat, stat_name):
+        print(json_stat)
         self.type_pr = json_stat["type"]
         data = json_stat["data"]
 
-        if version == 1:
-            data = statistic_v1_to_v2(data, self.cfg["MinPercent"], self.cfg["MinSuccessCnt"])
-        elif version != 2:
-            raise ErrDict("Error stat file version", "err_stat_version")
-
         for it in data:
+            print(it)
             self.get_word_by_key(it).unpack(data[it])
 
     # загрузка даних з файла статистики
-    def reload_stat(self, path):
-        if os.path.exists(path):
-            self._reload_stat_from_json(json.load(open(path)))
+    def reload_stat(self, path_to_statistics_folder):
+        files = [f for f in os.listdir(path_to_statistics_folder) if
+                 os.path.isfile(os.path.join(path_to_statistics_folder, f))]
+
+        for file_name in files:
+            self._reload_stat_from_json(
+                self.load_dictionary_as_json(path_to_statistics_folder + '/' + file_name),
+                file_name
+                )
+
+    @staticmethod
+    def get_files_from_folder(folder_name):
+        return [f for f in os.listdir(folder_name) if os.path.isfile(os.path.join(folder_name, f))]
 
     # збереження статистики в файл
     def save_stat(self, path):
@@ -228,12 +241,12 @@ class Dict:
 
         self.cfg.reload()
 
-        json_dict = json.load(codecs.open(self.cfg["path_to_dict"], "r", "utf-8"))
+        json_dict = json.load(codecs.open(self.cfg["path_to_statistics_folder"], "r", "utf-8"))
         json_dict = self._rename_in_json_dict(old_en, new_en, new_tr, new_ru, json_dict)
-        self.reload_stat(self.cfg["path_to_stat"])
+        self.reload_stat(self.cfg["path_to_statistics_folder"])
         self._rename_in_dict(old_en, new_en, new_tr, new_ru)
-        self.save_dict(self.cfg["path_to_dict"], json_dict)
-        self.save_stat(self.cfg["path_to_stat"])
+        self.save_dict(self.cfg["path_to_dictionaries_folder"], json_dict)
+        self.save_stat(self.cfg["path_to_statistics_folder"])
 
     def _loaded_words(self, type_pr):
         return [(it, it.get_stat(type_pr)) for it in self.words.values() if it.is_load()]
@@ -294,7 +307,7 @@ class Dict:
         # обрізаю
         studied_words = studied_words[:cnt_study_words - count_learned_words]
 
-        lesson_words = learned_words + studied_words[:cnt_study_words-len(learned_words)]
+        lesson_words = learned_words + studied_words[:cnt_study_words - len(learned_words)]
 
         # - убрати
         # print(len(lesson_words), len(learned_words), len(studied_words))

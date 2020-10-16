@@ -19,7 +19,7 @@ class SingleInstance:
 
     This option is very useful if you have scripts executed by crontab at small amounts of time.
 
-    Remember that this works by creating a lock file with a filename based on the full path to the script file.
+    Remember that this works by creating a lock file with a filename based on the full path_to_dictionaries_folder to the script file.
     """
     def __init__(self, flavor_id=""):
         main_dir = os.path.splitext(os.path.abspath(sys.modules['__main__'].__file__))[0]

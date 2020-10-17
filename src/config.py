@@ -12,7 +12,7 @@ reg_cmnt = re.compile(r"/\*.*?\*/", re.DOTALL)
 class Config:
     "Работа с конфигурационным файлом"
 
-    def __init__(self, main_config_path = None, user_config_path = None):
+    def __init__(self, main_config_path=None, user_config_path=None):
         self._main_config_path = main_config_path
         self._user_config_path = user_config_path
 
@@ -39,6 +39,13 @@ class Config:
         return data
 
     def _set_default_config(self, cfg):
+        learning_dictionaries = []
+
+        for dictionary in cfg.get("current_learning_dictionaries", []):
+            learning_dictionaries.append(dictionary + '.json5')
+
+        cfg["current_learning_dictionaries"] = learning_dictionaries
+
         cfg["path_to_dictionaries_folder"] = cfg.get("path_to_dictionaries_folder", "dictionaries")
         cfg["path_to_dictionaries_folder"] = cfg.get("path_to_dictionaries_folder", "statistics")
         cfg["words_per_lesson"] = int(cfg.get("words_per_lesson", 5))
@@ -56,7 +63,7 @@ class Config:
                                                  {
                                                      "EN_RU": "http://slovari.yandex.ru/{word}/en-ru/#lingvo/",
                                                      "RU_EN": "http://slovari.yandex.ru/{word}/en/#lingvo/"
-                                                     })
+                                                 })
 
     def create_default_user_config(self):
         if not os.path.isfile(self._user_config_path):

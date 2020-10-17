@@ -1,0 +1,8389 @@
+{
+  "data": {
+    "(beat|beat|beaten)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(become|became|become)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(begin|began|begun)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(be|was|were|been)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(bleed|bled|bled)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(blow|blew|blown)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(break|broke|broken)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(bring|brought|brought)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(build|built|built)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        1, 
+        0, 
+        "2020.10.17", 
+        true, 
+        10.0
+      ]
+    }, 
+    "(burn|burnt|burnt)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(burst|burst|burst)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(buy|bought|bought)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(catch|caught|caught)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(choose|chose|chosen)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(come|came|come)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(cost|cost|cost)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(creep|crept|crept)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(cut|cut|cut)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(do|did|done)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(draw|drew|drawn)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(dream|dreamt|dreamt)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(drink|drank|drunk)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(drive|drove|driven)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(eat|ate|eaten)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(fall|fell|fallen)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(feed|fed|fed)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(feel|felt|felt)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(fight|fought|fought)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(find|found|found)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(fit|fit|fit)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(fly|flew|flown)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(forget|forgot|forgotten)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(forgive|forgave|forgiven)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(freeze|froze|frozen)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(get|got|gotten|got)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        1, 
+        0, 
+        "2020.10.17", 
+        true, 
+        10.0
+      ]
+    }, 
+    "(give|gave|given)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(go|went|gone)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(grow|grew|grown)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(hang|hung|hung)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(have|had|had)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(hear|heard|heard)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(hide|hid|hidden)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(hit|hit|hit)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(hold|held|held)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(hurt|hurt|hurt)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(keep|kept|kept)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(know|knew|known)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(lay|laid|laid)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(learn|learnt|learnt)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(leave|left|left)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(let|let|let)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(lie|lay|lain)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(lose|lost|lost)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(make|made|made)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(mean|meant|meant)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(meet|met|met)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(pay|paid|paid)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(prove|proved|proven)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(put|put|put)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(read|read|read)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(ride|rode|ridden)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(ring|rang|rung)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(rise|rose|risen)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(run|ran|run)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(say|said|said)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(see|saw|seen)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(sell|sold|sold)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(send|sent|sent)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(set|set|set)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(sew|sewed|sewn)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(shake|shook|shaken)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(show|showed|shown)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(shrink|shrank|shrunk)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(shut|shut|shut)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(sing|sang|sung)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(sink|sank|sunk)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(sit|sat|sat)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(sleep|slept|slept)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(speak|spoke|spoken)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(spend|spent|spent)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(stand|stood|stood)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(steal|stole|stolen)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(swim|swam|swum)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(take|took|taken)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(teach|taught|taught)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(tell|told|told)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(think|thought|thought)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(throw|threw|thrown)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(understand|understood|understood)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(wake|woke|woken)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(wear|wore|worn)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(weep|wept|wept)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(wet|wet|wet)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(win|won|won)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "(write|wrote|written)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "French fries (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "I can't agree with you more": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "I know what you mean": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "absent{-}minded (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "advice on{ smth}": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "all the time": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "annoyed (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "antique (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "antique (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "anymore (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "anyway (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "application form (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "assist (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "assistant (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "audience (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "avalanche (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "avenger (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "baby (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "baby (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "back (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "backache (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "band (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "basement (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "believe it or not": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "besides (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "best{-}selling (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "bill (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "blogger (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "blonde (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "blonde (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "boil (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "bore (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "bouquet (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "bowl (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "boxing (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "brave (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "brave (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "bride (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "bridesmaid (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "broad{-}minded (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "burger (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "business (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        1, 
+        0, 
+        "2020.10.17", 
+        true, 
+        10.0
+      ]
+    }, 
+    "by the way (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "camping (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "capability (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "capture (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "captured (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "car dealership (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "cashier (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "cautious (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "celebrity (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "century (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "change (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "charge (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "charity (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "chocolate (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "chocolate (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "chop (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "classmate (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "closet (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "co-worker (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "coin (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "coincidence (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "colleague (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "college (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "column (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "competition (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "complete (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "complete (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "consumer (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "consumer (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "conversation (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "cook (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "cough (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "cupcake (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "dare (n)(is something that is risky, dangerous or perhaps scary)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "decision (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "delay (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "department store (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "dictionary (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "diet (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "different (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "dislike (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "drill (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "drink (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "dumplings (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "during (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "electric bill (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "even more": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "faint (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "faint (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "family reunion": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "fashionable (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "feel like": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "fence (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "fiance (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "firefighter (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "firework (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "first{-}row seat (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "flour (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "flour (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "fluent (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "for a while (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "foreigner (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "forever (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "fortune teller (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "furniture (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "garbage (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "grate (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "groceries (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "group mate (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "group travel (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "grumpy (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "guess (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "gun (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "habit (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "hammer (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "head (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "head (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "headache (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "health club (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "heavy (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "high heels (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "highway (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "hiking (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "home remedy (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "hurt (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "hurt (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "impact (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "in a hurry (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "infantry (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "informative (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "instantly (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "instead (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "intent (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "intent (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "iron (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "iron (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "is that OK with you": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "jogging (n, gerund)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "journalist (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "junk (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "junk food (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "karate (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "kind of (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "landlord (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "landscape (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "landscape (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "lately (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "laundry (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "lettuce (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "likely (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "likely (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "like{-}minded (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "lucky (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "mace (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "medicine (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "mend (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "mind (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "miss (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "move (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "movie{-}theater (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "mow (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "mugger (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "mushroom (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "mushroom (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "napkin (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "narrow{-}minded (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "nearby (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "nearby (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "neat (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "no wonder": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "novel (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "one of (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "onion (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "open{-}minded (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "opportunity (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "optimist (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "order (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "own (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "own (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "painkiller (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "paint (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "party pooper (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "pay (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "payout (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "pear (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "perfect (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "pessimist (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "pick (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "place (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "plant (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "plenty of (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "policeman (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "practice (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "probably (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "productive (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "promotion (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "pronunciation (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "public transportation (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "quite a lot (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "raise (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "recall (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "recently (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "refreshing (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "refreshing (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "relative (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "relative (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "remedy (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "repair (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "rest (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "review (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "right away (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "risk (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "roof (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "rule (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "run (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "sailing (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "sales manager (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "saucepan (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "season (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "season (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "serious (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "several (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "several (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "share (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "shock (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "shock (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "shy (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "skating (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "skating rink (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "sledding (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "solo travel (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "special (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "special (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "spray (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "staff meeting (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "start (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "store manager (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "strawberry (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "strawberry (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "striped (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "surfing board (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "surprise (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "surprise (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "swimming pool (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "talent (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "talk (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "task (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "that (conj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "that (pron)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "their (pron)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "then (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "these (pron)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "this (pron)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "those (pron)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "thought (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "tie (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "to be honest": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "toothache (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "tour (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "travel agent (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "tray (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "trend (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "trick (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "tricky (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "tuna (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "type (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "unusual (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "update (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "used (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "very few (with countable nouns)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "very little (with uncountable nouns)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "vice{-}president (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "victim (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "vitamin (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "walking dog": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "walking with dog": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "watch (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "weekly (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "weekly (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "well{-}paid (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "whole{-}wheat (adj)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "would like": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "would prefer (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "writer (n)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "yet (adv)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{a }few (with countable nouns)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{a }little (with uncountable nouns)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{a }lot of (affirmative sentences with countable and uncountable nouns)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{the }umpteenth time": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }(take|took|taken) lessons (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }acquire (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }admire (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }admit (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }anticipate (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }appreciate (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }assist (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }avoid (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }baby (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }be about to{} (go, speak, do smth.) (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }be interested in (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }boil (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }bore (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }borrow (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }capture (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }change (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }chop (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }clean up (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }coin (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }coincide (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }collect (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }complete (v) (to finish)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }consider (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }cough (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }cut down (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }dare (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }delay (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }dig out (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }discuss (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }dislike (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }do food shopping (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }do over (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }drill (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }drink (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }embarrass (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }enjoy (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }enroll (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }expect (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }faint (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }fight about (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }fire (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }fix (v)(whole thing/situation)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }get better (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }give up (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }go on {a }diet (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }go on {a }picnic (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }go out on {a }date (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }go window{-}shopping (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }grate (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }guess (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }hammer (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }hand in (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }hang up (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }have trouble (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }have {a }baby (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }head (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }hold up (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }hurt (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }imagine (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }iron (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }junk (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }knock out (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }know in person (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }lend (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }make fun of (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }make {a }decision (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }make {a }mistake (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }make {a }plan{} for (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }mend (v)(smth less complicated)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }mind (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }miss (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }move (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }mow (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }observe (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }order (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }own (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }paint (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }pay (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }perfect (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }pick (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }pick up (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }place (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }plant (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }pour (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }practice (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }predict (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }prefer (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }prepare for (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }proceed (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }pronounce (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }prove (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }punish (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }put away (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }put off, {to }postpone": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }put out a fire (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }quit (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }raise (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }raise voice (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }recall (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }recommend (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }redecorate (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }repair (v)(part of the thing)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }resist (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }rest (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }restrict (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }review (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }risk (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }rob (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }rule (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }run into (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }set up {the }chairs (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }sew (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }share (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }shock (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }shy (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }spray (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }start (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }start{s} {one's }own business (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }suggest (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }surprise (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }take a bus (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }take care of": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }take out (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }take part (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }talk (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        1, 
+        0, 
+        "2020.10.17", 
+        true, 
+        10.0
+      ]
+    }, 
+    "{to }talk out (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }terrify (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }tie (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }tour (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }travel around (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }trick (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }try{ one's} best (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }type (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }use up (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }wake {smb }up": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to }watch (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to} cook (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }, 
+    "{to} jog (v)": {
+      "en_to_ru": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ], 
+      "ru_to_en": [
+        0, 
+        0, 
+        null, 
+        null, 
+        0
+      ]
+    }
+  }, 
+  "type": "en_to_ru"
+}

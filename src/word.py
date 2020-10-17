@@ -174,12 +174,15 @@ class Word:
     def get_stat(self, type_pr):
         return self.stat[type_pr]
 
+    def get_dictionary_name(self):
+        return self.dictionary_name
+
 # Скоригував - розпаковує статистику для даного слова
-    def unpack(self, statistic):
-        for word in statistic:
+    def unpack(self, word_statistics, statistic_name):
+        for word in word_statistics:
             if word not in self.stat.keys():
                 self.stat[word] = statistic.Statistic()
-            self.stat[word].unpack(statistic[word])
+            self.stat[word].unpack(word_statistics[word], statistic_name)
 
 # запаковує статистику для даного слова
     def pack(self):

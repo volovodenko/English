@@ -18,6 +18,7 @@ class Statistic:
         self.last_lesson_date = None  # Дата последнего ответа
         self.last_lesson_result = None  # Результат последнего ответа
         self.study_percent = 0  # Процент изучения [0; 100]
+        self.statistic_name = None
 
     def __repr__(self):
         return ("Statistic(success_answer = {0}; "
@@ -89,15 +90,17 @@ class Statistic:
             self.error_answer += 1
 
     # розпаковка даних статистики для даного слова,  даного напрямку перекладу
-    def unpack(self, statistic):
+    def unpack(self, statistic, statistic_name):
         # лямбда для деструктуризації словаря
-        pluck = lambda dict, *args: (dict[arg] for arg in args)
+        # pluck = lambda dict, *args: (dict[arg] for arg in args)
 
         (self.success_answer,
          self.error_answer,
          self.last_lesson_date,
          self.last_lesson_result,
          self.study_percent) = statistic
+
+        self.statistic_name = statistic_name
         # в statistic список(массив) статистики для слова
         # pluck(statistic, 'success_answer', 'error_answer', 'last_lesson_date', 'last_lesson_result', 'study_percent')
 

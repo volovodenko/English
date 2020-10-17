@@ -46,10 +46,10 @@ def statistic_v1_to_v2(data, min_percent, min_success_cnt):
 class DictJSONEncoder(json.JSONEncoder):
 
     def __init__(self, skipkeys, ensure_ascii, check_circular, allow_nan, indent, separators, encoding, default):
-        json.JSONEncoder.__init__(self, skipkeys = False, ensure_ascii = False, check_circular = False,
-                                  allow_nan = True,
-                                  sort_keys = False, indent = 4, separators = (", ", ": "), encoding = "utf-8",
-                                  default = None)
+        json.JSONEncoder.__init__(self, skipkeys=False, ensure_ascii=False, check_circular=False,
+                                  allow_nan=True,
+                                  sort_keys=False, indent=4, separators=(", ", ": "), encoding="utf-8",
+                                  default=None)
 
     def _iterencode_list_lvl2(self, lst, max_len_lst):
         if len(lst) not in (2, 3):
@@ -101,13 +101,17 @@ class Dict:
         self.words = {}
         self.type_pr = None
         self.cfg = cfg
+        self.dictionary_file_names = []
 
     def get_word_by_key(self, en):
         w = self.words.get(en)
+
         if not w:
             w = self.words[en] = word.Word()
+
         return w
 
+    # Fixed
     def reload_dict_from_json(self, dictionary_data, dictionary_name):
         for current_word in dictionary_data:
             if len(current_word) == 3:
@@ -117,6 +121,7 @@ class Dict:
                 tr = ""
             self.get_word_by_key(en).add_value(en, tr, ru, dictionary_name)
 
+    # Fixed
     def load_dictionary_as_json(self, path):
         txt = open(path).read()
         txt = reg_comments.sub("", txt)  # remove comments
@@ -125,20 +130,21 @@ class Dict:
             return json.loads(txt)
         except ValueError as e:
             print("error at", e)
+            return None
 
+    # Fixed
     def reload_dict(self, path_to_dictionaries_folder):
         self.words = {}
-        files = [f for f in os.listdir(path_to_dictionaries_folder) if
-                 os.path.isfile(os.path.join(path_to_dictionaries_folder, f))]
+        self.dictionary_file_names = self.get_files_from_folder(path_to_dictionaries_folder)
 
-        for file_name in files:
+        for file_name in self.dictionary_file_names:
             self.reload_dict_from_json(
-                self.load_dictionary_as_json(path_to_dictionaries_folder + '/' + file_name),
+                self.load_dictionary_as_json(os.path.join(path_to_dictionaries_folder, file_name)),
                 file_name
-                )
+            )
 
     def save_dict(self, path, json_dict):
-        json.dump(json_dict, codecs.open(path, "w", "utf-8"), cls = DictJSONEncoder)
+        json.dump(json_dict, codecs.open(path, "w", "utf-8"), cls=DictJSONEncoder)
 
     def make_json_from_dict(self, keys):
         if keys is None:
@@ -146,36 +152,50 @@ class Dict:
         words = [self.words.get(key, None) for key in keys]
         return [list(w.get_source_info()) for w in words if w]
 
+    # Fixed
     # обробка даних файла статистики
-    def _reload_stat_from_json(self, json_stat, stat_name):
-        print(json_stat)
+    def _reload_stat_from_json(self, json_stat, statistic_name):
         self.type_pr = json_stat["type"]
-        data = json_stat["data"]
+        statistics = json_stat["data"]
 
-        for it in data:
-            print(it)
-            self.get_word_by_key(it).unpack(data[it])
+        for en_word_key in statistics:
+            self.get_word_by_key(en_word_key).unpack(statistics[en_word_key], statistic_name)
 
+    # Fixed
     # загрузка даних з файла статистики
     def reload_stat(self, path_to_statistics_folder):
-        files = [f for f in os.listdir(path_to_statistics_folder) if
-                 os.path.isfile(os.path.join(path_to_statistics_folder, f))]
+        for file_name in self.dictionary_file_names:
+            file_path = os.path.join(path_to_statistics_folder, file_name)
 
-        for file_name in files:
+            if not os.path.isfile(file_path):
+                self.create_empty_statistics_file(file_path)
+
             self._reload_stat_from_json(
-                self.load_dictionary_as_json(path_to_statistics_folder + '/' + file_name),
+                self.load_dictionary_as_json(file_path),
                 file_name
-                )
+            )
 
-    @staticmethod
-    def get_files_from_folder(folder_name):
-        return [f for f in os.listdir(folder_name) if os.path.isfile(os.path.join(folder_name, f))]
+    def can_include_file(self, file_name):
+        current_dictionaries = self.cfg["current_learning_dictionaries"]
+
+        return (len(current_dictionaries) and file_name in current_dictionaries) or not len(current_dictionaries)
+
+    def get_files_from_folder(self, folder_name):
+        return [
+            f for f in os.listdir(folder_name)
+            if (os.path.isfile(os.path.join(folder_name, f)) and f.endswith('.json5')) and self.can_include_file(f)
+        ]
 
     # збереження статистики в файл
     def save_stat(self, path):
         data = {}
-        for it in self.words:
-            data[it] = self.words[it].pack()
+        for en_word in self.words:
+            dictionary_name = self.words[en_word].get_dictionary_name()
+
+            if dictionary_name not in data:
+                data[dictionary_name] = {}
+
+            data[dictionary_name][en_word] = self.words[en_word].pack()
 
         # кожно разу міняю тип вивчення (en-ru, ru-en) на протилежний
         # раніше було рандомно - так погано працює - багато разів може вибрати одне й те саме
@@ -184,10 +204,16 @@ class Dict:
         else:
             type_pr = word.en_to_ru_write
 
-        stat_json = {"version": 2, "data": data, "type": type_pr}
-        # print stat_json
-        # indent=2 - 2 символа відступів в файлі
-        json.dump(stat_json, open(path, "wb"), indent = 2, sort_keys = True)
+        for dictionary_name in data:
+            stat_json = {"data": data[dictionary_name], "type": type_pr}
+            # indent=2 - 2 символа відступів в файлі
+            json.dump(stat_json, open(os.path.join(self.cfg["path_to_statistics_folder"], dictionary_name), "wb"),
+                      indent=2, sort_keys=True)
+
+    @staticmethod
+    def create_empty_statistics_file(file_path):
+        stat_json = {"data": {}, "type": word.ru_to_en_write}
+        json.dump(stat_json, open(file_path, "wb"), indent=2, sort_keys=True)
 
     def global_statistic(self):
         stat = global_stat.GlobalStatistic()
@@ -268,7 +294,7 @@ class Dict:
                     studied_words.append(wrd)
 
         # сортую по даті, по збільшенню дати, - перші самі давніші
-        all_learned_words.sort(key = lambda it: it.get_stat(type_pr).get_last_lesson_date())
+        all_learned_words.sort(key=lambda it: it.get_stat(type_pr).get_last_lesson_date())
 
         # беру лише необхідну к-сть перших слів (не більше 10% від слів на урок)
         learned_words = all_learned_words[:count_learned_words]
@@ -294,7 +320,7 @@ class Dict:
         # дополняем изучеными словами
         if len(learned_words + studied_words) < cnt_study_words:
             lw = self._loaded_words(self.type_pr)
-            lw.sort(key = lambda (it, stat): stat.get_last_lesson_date())
+            lw.sort(key=lambda (it, stat): stat.get_last_lesson_date())
 
             for (wrd, stat) in lw:
                 if stat.get_study_percent() >= 100 and wrd not in (learned_words + studied_words):
@@ -303,7 +329,7 @@ class Dict:
                         break
 
         # сортую по success_percent
-        studied_words.sort(key = lambda it: it.get_stat(type_pr).get_success_percent())
+        studied_words.sort(key=lambda it: it.get_stat(type_pr).get_success_percent())
         # обрізаю
         studied_words = studied_words[:cnt_study_words - count_learned_words]
 
